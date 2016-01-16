@@ -20,7 +20,7 @@
 -- NOTES: The core functionality of the program. This file include the definition for the three processes: input, 
 --	output, and translate. As well as their respective behavior when communicating with one another through the use
 --  of pipes. The input proccess takes in user inputs from stdin and sends each respective characters to the output 
--- 	process until the carriage return key is recieved, which then sends the data stream recorded to the translate 
+-- 	process until the carriage return key is recieved, which then sends the entire line to the translate 
 -- 	process. The translate process reads data from the input pipe and translate characters based on given requirements,
 --	and then the modified data is sent to the ouput process. The output process reads data from pipe that is used by
 --	the input and translate process and echo whatever that is recieved onto the screen.

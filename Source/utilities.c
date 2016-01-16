@@ -156,11 +156,11 @@ void handle_signal(int sig)
 {
 		signal(sig, NULL);
 
+		toogle_termproc(ON);
 		/* kill all three processes */
 		kill(id_in, sig);
 		kill(id_out, sig);
 		kill(id_trans, sig);
 
-		toogle_termproc(ON);
 }
 

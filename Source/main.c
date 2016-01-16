@@ -2,29 +2,26 @@
 #include "processes.h"
 
 /*------------------------------------------------------------------------------------------------------------------
--- SOURCE FILE:	keycatcher.c - An application that reads keyboard input, then processes and displays
+-- SOURCE FILE:	Asn1.c - An application that reads keyboard input, then processes and displays
 							   the results.
 -- 
--- PROGRAM:		keycatcher
+-- PROGRAM:		Asn1
 -- 
--- FUNCTIONS:	void catch_sig(int signo)
---				void init_buffer(char buffer[BUFFER_LEN])
---				void stty_io(int enable)
--- 				void fatal(char * s)
+-- FUNCTIONS:	intt main(void)
 --
 -- 
--- DATE:		January 21, 2009
+-- DATE:		January 8, 2016
 -- 
--- REVISIONS:	2008-01-22 - Split into input.c, output.c, and translate.c
+-- REVISIONS:
 -- 
--- DESIGNER:	Steffen L. Norgren
+-- DESIGNER:	Ruoqi Jia
 -- 
--- PROGRAMMER:	Steffen L. Norgren
+-- PROGRAMMER:	Ruoqi Jia
 -- 
 -- NOTES: This program demonstrates practical use of pipes, processes, and signals. The program creates three
 -- different processes: input, output, and translate. The input process reads inputs recived from a terminal keyboard
 -- and echoed to the screen by the output process. each line is modified and handled by the translate process, which will
--- also be echoed out by the output process. Each invidivual will communicate via pipes.
+-- also be echoed out by the output process. Each invidivual processes will communicate via pipes.
 --
 --------------------------------------------------------------------------------------------------------------------*/
 int main(void) 
