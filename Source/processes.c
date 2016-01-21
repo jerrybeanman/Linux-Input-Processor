@@ -256,6 +256,7 @@ void translate(char from[MSG_SIZE], char to[MSG_SIZE])
 				break;
 			case NORM_TERM:		/* 'T' detected */
 				isterm = 1;
+				return;
 				break;
 			default:			/* Copy char to char */
 				to[j] = from[i];
